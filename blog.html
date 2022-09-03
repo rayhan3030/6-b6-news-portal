@@ -51,3 +51,147 @@
 
             </div>
         </section>
+        <!-- Blog section -->
+
+        <section class="dark:bg-gray-800 dark:text-gray-100">
+            <div class="container flex flex-col justify-center p-4 mx-auto md:p-8">
+                <p class="p-2 text-sm font-medium tracking-wider text-center uppercase">Assignment 6: Some Basic
+                    Question
+                    and Answers</p>
+                <h2 class="mb-12 text-4xl font-bold leading-none text-center sm:text-5xl text-green-400">Parrot News
+                    Education Program
+                    FAQ
+                </h2>
+                <div class="flex flex-col divide-y sm:px-8 lg:px-12 xl:px-32 divide-gray-700">
+                    <details>
+                        <summary class="py-2 outline-none cursor-pointer focus:underline text-cyan-400	text-3xl">What is
+                            the difference between
+                            var, let and const?</summary>
+                        <div class="px-4 pb-4">
+                            <p>In JavaScript, users can declare a variable using 3 keywords that are var, let, and
+                                const. In this article, we will see the differences between the var, let, and const
+                                keywords. We will discuss the scope and other required concepts about each keyword.
+
+                                var keyword in JavaScript: The var is the oldest keyword to declare a variable in
+                                JavaScript.
+
+                                Scope: Global scoped or function scoped. The scope of the var keyword is the global or
+                                function scope. It means variables defined outside the function can be accessed
+                                globally, and variables defined inside a particular function can be accessed within the
+                                function.</p>
+                        </div>
+                    </details>
+                    <details>
+                        <summary class="py-2 outline-none cursor-pointer focus:underline text-cyan-400 text-3xl">What is
+                            the
+                            difference arrow function and regular function?</summary>
+                        <div class="px-4 pb-4">
+                            <p>An arrow function is also known as the fat arrow function. It is a new feature introduced
+                                in ES6 that is a more concise syntax for writing function expressions. Both regular
+                                JavaScript functions and arrow functions work in a similar manner but there are some
+                                differences between them. Let's see the differences below: - <br>
+
+                                Syntax
+                                Arguments binding
+                                Use of this keyword
+                                Using a new keyword
+                                <br>
+                                <span class="font-bold text-yellow-300">1) Syntax:</span>
+                                A programmer can get the same result as regular functions by writing a few lines of code
+                                using arrow functions.
+                                <br>
+                                Curly brackets are not required if only one expression is present.
+                                <br>
+                                <span class="font-bold text-yellow-300">2) Arguments binding</span>
+                                arguments object inside the regular functions contains the list of arguments.
+                                The arrow function, on the opposite, doesn’t define arguments i.e. they do not have
+                                arguments binding.
+                                But you can easily access the arrow function arguments using a rest parameter <br>
+                                <span class="font-bold text-yellow-300">3) Use of this keyword</span>
+                                Inside of a regular JavaScript function, this value is dynamic. The dynamic context
+                                means that the value of this depends on how the function is invoked.
+                                The behavior of this inside of an arrow, function differs considerably from the regular
+                                function’s this behavior as an arrow function does not have its own “this” keyword.<br>
+
+                                The value of this inside an arrow function remains the same throughout the lifecycle of
+                                the function and is always bound to the value of this in the closest non-arrow parent
+                                function which means No matter how or where being executed, this value inside of an
+                                arrow function always equals this value from the outer function.<br>
+                                <span class="font-bold text-yellow-300">4) Using a new keyword</span>
+                                Regular functions are constructible and callable. They can be called using the new
+                                keyword.
+                                But, the arrow functions are only callable and not constructible, i.e., arrow functions
+                                can never be used as constructor functions.<br>
+                                <span class="font-bold text-red-300">Summary</span>
+                                this value inside a regular function is dynamic and depends on how the function is
+                                invoked. But this inside the arrow function is bound lexically and equals to this of the
+                                outer function. Fat arrow methods always bind this a value to the class instance.
+                            </p>
+                        </div>
+                    </details>
+                    <details>
+                        <summary class="py-2 outline-none cursor-pointer focus:underline text-cyan-400 text-3xl">What is
+                            the difference in map, forEach, filter and find?</summary>
+                        <div class="px-4 pb-4 space-y-2">
+                            <p><span class="font-bold text-yellow-300">.forEach(), .map(), .filter() .... What's the
+                                    difference?
+                                    :</span> <br> .forEach: <br>
+
+                                .forEach(), is used to execute the same code on every element in an array but does not
+                                change the array and it returns undefined. <br>
+
+                                <span class="font-bold text-yellow-300">Example: </span><br>
+                                In the example below we would use .forEach() to iterate over an array of food and log
+                                that we would want to eat each of them. <br>
+                                <span class="font-bold text-yellow-300">.map(): </span><br>
+                                .map() executes the same code on every element in an array and returns a new array with
+                                the updated elements. <br>
+
+                                <span class="font-bold text-yellow-300">Example: </span>
+                                In the example below we would use .map to iterate over the elements of the cost array
+                                and divide each element by 10, then assign our new array containing the new cost to the
+                                variable newCost. <br>
+                                <span class="font-bold text-yellow-300">.filter():</span>
+                                .filter() checks every element in an array to see if it meets a certain criteria and
+                                returns a new array with the elements that return truthy for the criteria. <br>
+
+                                <span class="font-bold text-yellow-300">Example:</span>
+                                In the example below we would use .filter to return values that are less than 200.
+                                <br>
+
+                            </p>
+                        </div>
+                    </details>
+                    <details>
+                        <summary class="py-2 outline-none cursor-pointer focus:underline text-cyan-400 text-3xl">Why
+                            should you use template string?</summary>
+                        <div class="px-4 pb-4 space-y-2">
+                            <p>Template strings are a powerful feature of modern JavaScript released in ES6. It lets us
+                                insert/interpolate variables and expressions into strings without needing to concatenate
+                                like in older versions of JavaScript. It allows us to create strings that are complex
+                                and contain dynamic elements. Another great thing that comes with template strings are
+                                tags. Tags are functions that take a string and the decomposed parts of the string as
+                                parameters and are great for converting strings to different entities. <br>
+
+                                The syntax for creating template strings is by using backticks to delimit them. For
+                                example, we can write: <br>
+
+                                <mark>`This is a string`</mark> <br>
+                                This is a very simple example of a template string. All the content is constant and
+                                there are no variables or expressions in it. To add variables and or expressions to a
+                                string, we can do the following.
+                            </p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- news.js added -->
+    <script src="js/news.js"></script>
+</body>
+
+</html>
