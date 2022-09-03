@@ -38,3 +38,41 @@ const newsClick = (category_id) => {
         .then(res => res.json())
         .then(data => displayNews(data.data))
 }
+const displayNews = newses => {
+    // console.log(news)
+
+    const newsDiv = document.getElementById('news-div');
+
+    newsDiv.textContent = '';
+    for (news of newses) {
+        console.log(news)
+        const counterDiv = document.getElementById('counter')
+        counterDiv.innerText = `Total News Loaded :${newses.length}`
+
+
+        const newDiv = document.createElement('div')
+        newDiv.classList.add('card')
+        newDiv.innerHTML = `
+        <div class="card card-side bg-base-100 shadow-xl w-3/4 border  flex-col md:flex-row md:ml-40 ml-10 mt-5">
+                <figure><img class="w-44" src="${news.thumbnail_url}" alt="Movie"></figure>
+                <div class="card-body">
+                    <h2 class="card-title">${news.title}</h2>
+                    <p>${news.details.slice(0, 200)}...</p>
+                    <div class="md:flex md:flex-row flex-col">
+                    <p><img class="w-10 rounded-full" src="${news.author.img}" alt="">${news.author.name}</p>
+                    <p>Total Views: ${news.total_view}</p>
+                        
+                        <a onclick="loadNewsDetails('${news._id}')" href="#my-modal-2" class="btn">Details</a>
+                    </div>
+                </div>
+            </div>
+        `;
+        newsDiv.appendChild(newDiv);
+
+
+    }
+
+
+
+    // stop loader
+}
