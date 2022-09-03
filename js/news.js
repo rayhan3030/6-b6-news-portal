@@ -16,3 +16,16 @@ const setAllCat = async () => {
         menu.appendChild(li);
 
     });
+    // for (const newscat of data) {
+    //     // console.log(newscat.category_name)
+    ;
+    // toggleSpinner(true)
+    // const toggleSpinner = isLoading => {
+    //     const loaderSection = document.getElementById('loader');
+    //     if (isLoading === true) {
+    //         loaderSection.classList.remove('invisible')
+    //     }
+    // }
+
+
+}
