@@ -76,3 +76,37 @@ const displayNews = newses => {
 
     // stop loader
 }
+const loadNewsDetails = async _id => {
+    const url = `https://openapi.programming-hero.com/api/news/${_id}`;
+    const res = await fetch(url);
+    const data = await res.json();
+    detailsNews(data.data);
+}
+
+const detailsNews = news => {
+    console.log(news)
+    const modalDiv = document.getElementById('my-modal-2')
+    modalDiv.classList.add('modal')
+    modalDiv.innerHTML = `
+        <div class="modal-box">
+        <figure><img class="" src="${news[0].image_url}" alt="Movie"></figure>
+        <h3 class="font-bold text-lg">${news[0].title}!</h3>
+        <p class="py-4">${news[0].details}!</p>
+        <p><img class="w-10 rounded-full" src="${news[0].author.img}" alt="">${news[0].author.name}</p>
+        <p>Publish Date : ${news[0].author.published_date}</p>
+        <div class="modal-action">
+            <a href="#" class="btn">Close!</a>
+        </div>
+    </div>
+        `;
+
+
+    // modalDiv.appendChild(newModalDiv)
+
+}
+
+
+
+setAllCat();
+
+// loadAllNews ()
