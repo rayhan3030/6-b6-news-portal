@@ -29,6 +29,8 @@ const setAllCat = async () => {
 
 
 }
+
+
 const newsClick = (category_id) => {
     //https://openapi.programming-hero.com/api/news/category/{category_id}
     const url = `https://openapi.programming-hero.com/api/news/category/${category_id}`
@@ -38,6 +40,7 @@ const newsClick = (category_id) => {
         .then(res => res.json())
         .then(data => displayNews(data.data))
 }
+
 const displayNews = newses => {
     // console.log(news)
 
@@ -76,6 +79,8 @@ const displayNews = newses => {
 
     // stop loader
 }
+
+
 const loadNewsDetails = async _id => {
     const url = `https://openapi.programming-hero.com/api/news/${_id}`;
     const res = await fetch(url);
