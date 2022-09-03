@@ -29,3 +29,12 @@ const setAllCat = async () => {
 
 
 }
+const newsClick = (category_id) => {
+    //https://openapi.programming-hero.com/api/news/category/{category_id}
+    const url = `https://openapi.programming-hero.com/api/news/category/${category_id}`
+    // console.log('got news id', id)
+    // console.log(url)
+    fetch(url)
+        .then(res => res.json())
+        .then(data => displayNews(data.data))
+}
